@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_main"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@android:color/white"
+        android:hint="@string/judul"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/edit_file"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:gravity="top|start"
+        android:hint="@string/catatan"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edt_title"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <Button
+            android:id="@+id/new_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
